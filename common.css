@@ -1,0 +1,48 @@
+:root {
+  --primary-color: #161853;
+  --primary-color-blur: #16185320;
+  --secondary-color: #292C6D;
+  --tertiary-color: #FAEDF0;
+  --primary-contrast-color: #EC255A;
+
+  --white: #fff;
+}
+
+html {
+  font-size: 10px;
+  font-family: monospace, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#back-to-menu {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+
+  display: flex;
+  align-items: center;
+
+  width: auto;
+  height: 6rem;
+  padding: 0 2rem;
+
+  background-color: var(--primary-color);
+  color: var(--white);
+
+  border-radius: 1rem;
+  border: 0.5rem solid var(--white);
+
+  font-size: 1.6rem;
+  text-decoration: none;
+
+  transition: 0.2s;
+}
+
+#back-to-menu:hover {
+  opacity: 0.93;
+}

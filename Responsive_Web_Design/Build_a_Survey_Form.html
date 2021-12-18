@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build a Survey Form</title>
+  <link rel="stylesheet" href="../common.css">
+  <style>
+    body {
+      background: var(--primary-color);
+    }
+
+    .survey-form {
+      max-width: 700px;
+      height: auto;
+      margin: 2rem auto;
+      padding: 1rem;
+
+      background: var(--white);
+
+      border-radius: 0.5rem;
+    }
+
+    #title {
+      width: 100%;
+      height: 6rem;
+
+      background: var(--secondary-color);
+      color: var(--white);
+
+      border-radius: 0.5rem;
+
+      font-size: 2.4rem;
+      text-align: center;
+      line-height: 6rem;
+    }
+
+    #description {
+      width: 100%;
+      height: auto;
+
+      color: var(--secondary-color);
+
+      border-radius: 0.5rem;
+
+      font-size: 1.7rem;
+      text-align: center;
+      line-height: 2.8rem;
+    }
+
+    #survey-form {
+      width: 100%;
+      height: auto;
+    }
+
+    .form-group {
+      width: 100%;
+      height: auto;
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+
+    }
+
+    .form-group label {
+      display: block;
+
+      width: 100%;
+      height: 5rem;
+
+      font-size: 1.8rem;
+      line-height: 5rem;
+    }
+
+    .form-group>label {
+      display: block;
+
+      width: 100%;
+      height: 3rem;
+
+      color: var(--primary-color);
+
+      font-size: 1.7rem;
+      line-height: 3rem;
+    }
+
+    .form-group input[type='text'],
+    .form-group input[type='email'],
+    .form-group input[type='number'],
+    .form-group select {
+      width: 100%;
+      height: 5rem;
+      padding: 0 1rem;
+
+      border: 0.2rem solid var(--secondary-color);
+      border-radius: 0.5rem;
+
+      font-size: 1.8rem;
+      font-family: monospace, sans-serif;
+    }
+
+    .radio-input-group,
+    .checkbox-input-group {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+
+      width: 100%;
+      height: 5rem;
+    }
+
+    .radio-input-group input,
+    .checkbox-input-group input {
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+
+    }
+
+    .radio-input-group label,
+    .checkbox-input-group label {
+      display: inline-block;
+
+      width: calc(100% - 2rem);
+      padding: 0 1rem;
+    }
+
+    .form-group textarea {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.8rem;
+      line-height: 2.7rem;
+    }
+
+    #submit {
+      width: 100%;
+      height: 5rem;
+
+      background: var(--secondary-color);
+      color: var(--white);
+
+      border: none;
+      border-radius: 0.5rem;
+
+      font-size: 1.5rem;
+      text-transform: uppercase;
+
+      transition: 0.2s;
+      cursor: pointer;
+    }
+
+    #submit:hover {
+      opacity: 0.93;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="survey-form">
+    <h1 id="title">
+      Developer Survey Form
+    </h1>
+    <p id="description">
+      Thank you for taking the time to help us improve the platform
+    </p>
+    <form action="" id="survey-form">
+      <div class="form-group">
+        <label for="name" id="name-label">Name</label>
+        <input type="text" name="" id="name" required placeholder="Enter your name">
+      </div>
+      <div class="form-group">
+        <label for="email" id="email-label">Email</label>
+        <input type="email" name="" id="email" required placeholder="Enter your email">
+      </div>
+      <div class="form-group">
+        <label for="number" id="number-label">Score</label>
+        <input type="number" name="" id="number" required placeholder="Enter your score" min="0" max="10">
+      </div>
+      <div class="form-group">
+        <label>Your specialized</label>
+        <select name="specialized" id="dropdown">
+          <option value="front-end">Front End</option>
+          <option value="back-end">Back End</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Do you like coding?</label>
+        <div class="radio-input-group">
+          <label for="definitely">Definitely</label>
+          <input type="radio" name="recommend" id="definitely" value="definitely">
+        </div>
+        <div class="radio-input-group">
+          <label for="maybe">Maybe</label>
+          <input type="radio" name="recommend" id="maybe" value="maybe">
+        </div>
+        <div class="radio-input-group">
+          <label for="not-sure">Not sure</label>
+          <input type="radio" name="recommend" id="not-sure" value="not-sure">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Your favorite language</label>
+        <div class="checkbox-input-group">
+          <label for="html">HTML</label>
+          <input type="checkbox" name="language" id="html" value="html">
+        </div>
+        <div class="checkbox-input-group">
+          <label for="css">CSS</label>
+          <input type="checkbox" name="language" id="css" value="css">
+        </div>
+        <div class="checkbox-input-group">
+          <label for="js">JavaScript</label>
+          <input type="checkbox" name="language" id="js" value="js">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="comment">Your comment</label>
+        <textarea name="" id="comment" cols="30" rows="4"></textarea>
+      </div>
+      <button type="submit" id="submit">
+        Submit
+      </button>
+    </form>
+  </section>
+  <a id="back-to-menu" href="../index.html">
+    Back to Menu
+  </a>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>

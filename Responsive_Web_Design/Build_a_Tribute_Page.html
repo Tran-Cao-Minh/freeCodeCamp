@@ -6,26 +6,42 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Build a Tribute Page</title>
+  <link rel="stylesheet" href="../common.css">
   <style>
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #B1D0E0;
-      color: #1A374D;
+      font-family: monospace, sans-serif;
+      background: var(--primary-color);
+      color: var(--primary-color);
       text-align: center;
-      font-size: 20px;
+      font-size: 18px;
       line-height: 30px;
     }
 
     #main {
-      max-width: 500px;
-      margin: auto;
+      max-width: 620px;
+      margin: 2rem auto;
+      padding: 3rem 2rem;
+
+      background-color: var(--white);
+
+      border-radius: 0.5rem;
     }
 
     #image {
       display: block;
-      max-width: 100%;
+      max-width: 500px;
       height: auto;
       margin: auto;
+
+      border-radius: 0.5rem;
+    }
+
+    #title {
+      padding: 0 0 3rem;
+    }
+
+    #img-caption {
+      padding: 0.5rem 0 1rem;
     }
   </style>
 </head>
@@ -47,6 +63,9 @@
         id="tribute-link" target="_blank" href="https://www.freecodecamp.org/">Free Code Camp</a>
     </p>
   </main>
+  <a id="back-to-menu" href="../index.html">
+    Back to Menu
+  </a>
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 
